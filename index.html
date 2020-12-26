@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <head>
+        <title>Javascript</title>
+
+        <script type="text/javascript">
+            const winPoints = 10;
+            const losePoints = 2;
+
+            const questions = ['Como se llama la pelicula donde los seres humanos viven en un mundo virtual y controlado por computadoras?', 
+            'En que año se estreno?', 'Cual es el nombre del protagonista?'];
+
+            const answers = ['The Matrix', '1999', 'Keanu Reeves'];
+
+            var total = 0;
+            var correctQty = 0;
+
+            for (var i = 0; i < questions.length; i++) {
+                var response = prompt(questions[i]);
+
+                if (response.toUpperCase() === answers[i].toUpperCase()) {
+                    total += winPoints;
+                    correctQty++;
+                } else {
+                    total -= losePoints;
+                }
+            }
+
+            total > 0 ? alert(`Acertaste ${correctQty} respuest${correctQty > 1 ? 'as' : 'a'} y obtuviste ${total} puntos!!`) 
+                : alert('Tu puntaje fue menor que cero, deberia darte verguenza!!');
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
